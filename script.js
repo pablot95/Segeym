@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const WHATSAPP = '5492994155073';
 
   function showToast(msg) {
     let wrap = document.querySelector('.toast-wrap');
@@ -77,15 +78,20 @@
       e.preventDefault();
       const nombre = form.nombre.value.trim();
       const tel = form.tel.value.trim();
+      const servicio = form.servicio.value.trim();
+      const mensaje = form.mensaje.value.trim();
       if (!nombre || !tel) { showToast('Completá tu nombre y teléfono, por favor.'); return; }
-      const btn = form.querySelector('button[type=submit]');
-      const original = btn.textContent;
-      btn.disabled = true; btn.textContent = 'Enviando…';
-      setTimeout(() => {
-        btn.disabled = false; btn.textContent = original;
-        form.reset();
-        showToast('¡Gracias! El envío de mensajes se activa al pasar la web a producción.');
-      }, 850);
+      const lineas = [
+        'Hola Segeym World, te escribo desde la web:',
+        `Nombre: ${nombre}`,
+        `Teléfono: ${tel}`,
+        servicio ? `Servicio: ${servicio}` : '',
+        mensaje ? `Mensaje: ${mensaje}` : '',
+      ].filter(Boolean);
+      const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lineas.join('\n'))}`;
+      window.open(url, '_blank', 'noopener');
+      showToast('¡Listo! Te llevamos a WhatsApp para enviar tu consulta.');
+      form.reset();
     });
   }
 
