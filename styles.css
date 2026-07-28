@@ -28,6 +28,7 @@
 }
 html{overflow-x:clip;max-width:100vw;-webkit-text-size-adjust:100%}
 body{overflow-x:clip;max-width:100vw;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:var(--fs-body);line-height:1.65;-webkit-font-smoothing:antialiased;font-weight:450}
+body.no-scroll{overflow:hidden}
 h1,h2,h3,h4{font-family:var(--font-display);line-height:1.08;font-weight:800;letter-spacing:-.02em;color:var(--color-ink)}
 h1{font-size:var(--fs-h1);font-weight:700}h2{font-size:var(--fs-h2)}h3{font-size:var(--fs-h3)}
 a{color:inherit;text-decoration:none}
@@ -72,16 +73,19 @@ ul{list-style:none}
 .header-actions{display:flex;align-items:center;gap:.5rem}
 .menu-toggle{display:none;width:44px;height:44px;border-radius:50%;place-items:center;color:var(--color-ink)}
 .menu-toggle svg{width:24px;height:24px}
+.nav-close{display:none}
+.nav-backdrop{position:fixed;inset:0;z-index:110;background:rgba(10,20,32,.45);opacity:0;visibility:hidden;transition:opacity .3s var(--ease-out),visibility 0s .3s}
+.nav-backdrop.open{opacity:1;visibility:visible;transition:opacity .3s var(--ease-out)}
 
 /* hero */
 .hero{position:relative;min-height:100svh;margin-top:-104px;padding-top:104px;display:flex;align-items:center;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 90% at 85% 10%,#dcebfb,#fff 60%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;width:100%;padding-block:clamp(1.5rem,3vw,2.5rem)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;padding-block:clamp(1.5rem,3vw,2.5rem)}
 .hero-copy{padding-left:2rem}
 .hero-tagline{display:inline-flex;align-items:center;gap:.5rem;background:var(--color-accent-soft);color:#0e2136;font-weight:700;font-size:.82rem;padding:.4rem .9rem;border-radius:999px;margin-bottom:1.2rem}
 .hero-tagline svg{width:16px;height:16px}
 .hero h1{margin-bottom:1.2rem}
-.hero h1 .hl{color:var(--color-primary);position:relative;white-space:nowrap}
+.hero h1 .hl{color:var(--color-primary);position:relative}
 .hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:0;height:.9em;background:var(--color-accent-soft);z-index:-1;border-radius:4px}
 .hero-lead{font-size:clamp(1.05rem,1.4vw,1.22rem);color:var(--color-text-muted);max-width:34rem;margin-bottom:1.8rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.8rem}
@@ -269,6 +273,7 @@ ul{list-style:none}
 @media (max-width:1024px){
   .presenta-grid{grid-template-columns:1fr}
   .hero-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero-copy{padding-left:0}
   .hero-visual{max-width:420px;order:-1}
   .serv-grid{grid-template-columns:repeat(2,1fr)}
   .why,.zona{grid-template-columns:1fr}
@@ -278,9 +283,13 @@ ul{list-style:none}
   .footer-brand{grid-column:1/-1}
 }
 @media (max-width:768px){
-  .main-nav{position:fixed;top:0;right:0;height:100dvh;width:74%;max-width:320px;background:#fff;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.4rem;padding:2rem;transform:translateX(100%);visibility:hidden;transition:transform .38s var(--ease-rev),visibility 0s .38s,box-shadow 0s .38s;z-index:120;box-shadow:none}
+  .main-nav{position:fixed;top:0;right:0;max-height:100dvh;overflow-y:auto;width:74%;max-width:320px;background:#fff;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:.15rem;padding:1.3rem 1.5rem calc(1.5rem + env(safe-area-inset-bottom));border-radius:0 0 0 28px;transform:translateX(100%);visibility:hidden;transition:transform .38s var(--ease-rev),visibility 0s .38s,box-shadow 0s .38s;z-index:120;box-shadow:none}
   .main-nav.open{transform:translateX(0);visibility:visible;box-shadow:var(--shadow-lg);transition:transform .38s var(--ease-rev)}
-  .main-nav a{font-size:1.2rem}
+  .nav-close{display:flex;align-items:center;justify-content:center;align-self:flex-end;width:40px;height:40px;margin-bottom:.4rem;border-radius:50%;background:var(--color-bg-alt);color:var(--color-ink);transition:background .2s,color .2s}
+  .nav-close svg{width:19px;height:19px}
+  .nav-close:hover{background:var(--color-accent-soft);color:var(--color-primary)}
+  .main-nav a{font-size:1.08rem;padding:.9rem .1rem;border-bottom:1px solid var(--color-line)}
+  .main-nav a:last-of-type{border-bottom:none}
   .menu-toggle{display:grid}
   .header-cta{display:none}
   .trust-grid{grid-template-columns:1fr 1fr;gap:1rem}

@@ -49,15 +49,24 @@
   function initNav() {
     const toggle = document.getElementById('menuToggle');
     const nav = document.getElementById('mainNav');
+    const closeBtn = document.getElementById('navClose');
     if (toggle && nav) {
-      const close = () => { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); };
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(open));
-        if (open) { const a = nav.querySelector('a'); a && a.focus(); }
-      });
+      let bd = document.querySelector('.nav-backdrop');
+      if (!bd) { bd = document.createElement('div'); bd.className = 'nav-backdrop'; document.body.appendChild(bd); }
+      const close = () => {
+        nav.classList.remove('open'); bd.classList.remove('open'); nav.setAttribute('inert', '');
+        toggle.setAttribute('aria-expanded', 'false'); document.body.classList.remove('no-scroll');
+      };
+      const open = () => {
+        nav.classList.add('open'); bd.classList.add('open'); nav.removeAttribute('inert');
+        toggle.setAttribute('aria-expanded', 'true'); document.body.classList.add('no-scroll');
+        const a = nav.querySelector('a'); a && a.focus();
+      };
+      toggle.addEventListener('click', () => (nav.classList.contains('open') ? close() : open()));
+      closeBtn && closeBtn.addEventListener('click', () => { close(); toggle.focus(); });
+      bd.addEventListener('click', close);
       nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('open')) { close(); toggle.focus(); } });
     }
     document.querySelectorAll('a[href^="#"]').forEach((a) => {
       a.addEventListener('click', (e) => {
