@@ -151,7 +151,7 @@ ul{list-style:none}
 .why-item p{font-size:.9rem;color:var(--color-text-muted)}
 
 /* areas de automatizacion: la placa del cliente ocupa toda la card */
-.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.areas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .area-card{position:relative;display:block;aspect-ratio:1080/1350;border-radius:var(--radius);overflow:hidden;background:#0b1a2b;box-shadow:var(--shadow-sm);transition:transform .3s var(--ease-out),box-shadow .3s}
 .area-card:hover{transform:translateY(-6px);box-shadow:0 26px 52px -30px rgba(22,104,227,.55)}
 .area-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
@@ -161,7 +161,7 @@ ul{list-style:none}
 @media (hover:none){.area-hover{opacity:1;transform:none}}
 
 /* presentacion con video */
-.presenta-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3rem);align-items:center}
+.presenta-grid{display:grid;grid-template-columns:1.55fr .85fr;gap:clamp(1.5rem,4vw,3rem);align-items:center}
 .presenta-video{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);background:#0b1a2b}
 .presenta-video video{display:block;width:100%;aspect-ratio:16/9;max-height:62svh;object-fit:cover;background:#0b1a2b}
 .presenta-copy h2{margin-bottom:.8rem}
@@ -267,7 +267,6 @@ ul{list-style:none}
 
 /* responsive */
 @media (max-width:1024px){
-  .areas-grid{grid-template-columns:repeat(3,1fr)}
   .presenta-grid{grid-template-columns:1fr}
   .hero-grid{grid-template-columns:1fr;gap:2.5rem}
   .hero-visual{max-width:420px;order:-1}
@@ -279,7 +278,6 @@ ul{list-style:none}
   .footer-brand{grid-column:1/-1}
 }
 @media (max-width:768px){
-  .areas-grid{grid-template-columns:repeat(2,1fr)}
   .main-nav{position:fixed;top:0;right:0;height:100dvh;width:74%;max-width:320px;background:#fff;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.4rem;padding:2rem;transform:translateX(100%);visibility:hidden;transition:transform .38s var(--ease-rev),visibility 0s .38s,box-shadow 0s .38s;z-index:120;box-shadow:none}
   .main-nav.open{transform:translateX(0);visibility:visible;box-shadow:var(--shadow-lg);transition:transform .38s var(--ease-rev)}
   .main-nav a{font-size:1.2rem}
@@ -297,7 +295,8 @@ ul{list-style:none}
   .hero-photo{aspect-ratio:4/3;max-height:52svh;object-position:50% 20%}
   .serv-grid,.ambitos,.trust-grid,.proc-track{grid-template-columns:1fr}
   .hero-chip{left:0}
-  .hero-ctas .btn{flex:1}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{width:100%}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
@@ -307,7 +306,7 @@ ul{list-style:none}
 }
 
 /* ===== Segeym V1 extras ===== */
-.brand .logo img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(14,33,54,.28))}
+.brand .logo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;filter:drop-shadow(0 8px 18px rgba(14,33,54,.28))}
 .footer-brand .brand .logo{width:clamp(104px,12vw,150px);height:clamp(104px,12vw,150px)}
 .solutions{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .sol-card{position:relative;border-radius:var(--radius);overflow:hidden;min-height:300px;display:flex;align-items:flex-end;border:1px solid var(--color-line);transition:transform .3s var(--ease-out),box-shadow .3s}
