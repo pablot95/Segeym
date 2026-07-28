@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="styles.css?v=20260727213222">
+<link rel="stylesheet" href="styles.css?v=20260727213544">
 <noscript><style>[data-animate],[data-animate-stagger]>*{opacity:1!important;transform:none!important}</style></noscript>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Electrician","name":"Segeym World Argentina","description":"Servicios eléctricos: instalaciones, tableros, puesta a tierra, iluminación y mantenimiento. Además domótica, inmótica, urbótica y seguridad electrónica.","areaServed":["Vaca Muerta","Añelo","Plaza Huincul","Neuquén"],"telephone":"+5492994155073","url":"https://gokywebs.com/demo/segeymworldargentina/"}
@@ -138,34 +138,26 @@
         <p>Con la instalación resuelta, automatizar es simple: luces, climatización, riego, persianas, accesos y consumo, controlados desde el celular o por voz. Se puede empezar por un ambiente y crecer.</p>
       </div>
       <div class="areas-grid">
-        <article class="area-card" data-animate style="opacity:0;transform:translateY(26px)">
-          <img src="images/domotica.jpeg" width="1080" height="1350" alt="Placa de Segeym: Domótica. Automatización del hogar: controlá luces, clima, persianas y seguridad desde tu celular, todo conectado en una sola app." loading="lazy" decoding="async">
-          <div class="area-foot">
-            <h3>Domótica</h3>
-            <a class="area-cta" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20domótica" target="_blank" rel="noopener">Consultar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
-          </div>
-        </article>
-        <article class="area-card" data-animate style="opacity:0;transform:translateY(26px)">
-          <img src="images/inmotica.jpeg" width="1080" height="1350" alt="Placa de Segeym: Inmótica. La domótica aplicada a edificios y oficinas: gestión inteligente de energía, accesos y climatización a gran escala." loading="lazy" decoding="async">
-          <div class="area-foot">
-            <h3>Inmótica</h3>
-            <a class="area-cta" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20inmótica" target="_blank" rel="noopener">Consultar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
-          </div>
-        </article>
-        <article class="area-card" data-animate style="opacity:0;transform:translateY(26px)">
-          <img src="images/robotica.jpeg" width="1080" height="1350" alt="Placa de Segeym: Robótica. Robots y sistemas automatizados que asisten tareas del hogar o la empresa: limpieza, vigilancia y mucho más." loading="lazy" decoding="async">
-          <div class="area-foot">
-            <h3>Robótica</h3>
-            <a class="area-cta" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20robótica" target="_blank" rel="noopener">Consultar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
-          </div>
-        </article>
-        <article class="area-card" data-animate style="opacity:0;transform:translateY(26px)">
-          <img src="images/urbotica.jpeg" width="1080" height="1350" alt="Placa de Segeym: Urbótica. Tecnología inteligente aplicada a espacios urbanos: iluminación, seguridad y sensores conectados en la ciudad." loading="lazy" decoding="async">
-          <div class="area-foot">
-            <h3>Urbótica</h3>
-            <a class="area-cta" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20urbótica" target="_blank" rel="noopener">Consultar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
-          </div>
-        </article>
+        <a class="area-card" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20dom%C3%B3tica" target="_blank" rel="noopener" data-animate style="opacity:0;transform:translateY(26px)">
+          <img src="images/domotica.jpeg" width="1080" height="1350" alt="Domótica de Segeym: automatización del hogar. Controlá luces, clima, persianas y seguridad desde tu celular, todo conectado en una sola app." loading="lazy" decoding="async">
+          <h3 class="sr-only">Domótica</h3>
+          <span class="area-hover" aria-hidden="true">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></span>
+        </a>
+        <a class="area-card" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20inm%C3%B3tica" target="_blank" rel="noopener" data-animate style="opacity:0;transform:translateY(26px)">
+          <img src="images/inmotica.jpeg" width="1080" height="1350" alt="Inmótica de Segeym: la domótica aplicada a edificios y oficinas. Gestión inteligente de energía, accesos y climatización a gran escala." loading="lazy" decoding="async">
+          <h3 class="sr-only">Inmótica</h3>
+          <span class="area-hover" aria-hidden="true">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></span>
+        </a>
+        <a class="area-card" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20rob%C3%B3tica" target="_blank" rel="noopener" data-animate style="opacity:0;transform:translateY(26px)">
+          <img src="images/robotica.jpeg" width="1080" height="1350" alt="Robótica de Segeym: robots y sistemas automatizados que asisten tareas del hogar o la empresa, como limpieza y vigilancia." loading="lazy" decoding="async">
+          <h3 class="sr-only">Robótica</h3>
+          <span class="area-hover" aria-hidden="true">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></span>
+        </a>
+        <a class="area-card" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20informaci%C3%B3n%20sobre%20urb%C3%B3tica" target="_blank" rel="noopener" data-animate style="opacity:0;transform:translateY(26px)">
+          <img src="images/urbotica.jpeg" width="1080" height="1350" alt="Urbótica de Segeym: tecnología inteligente aplicada a espacios urbanos. Iluminación, seguridad y sensores conectados en la ciudad." loading="lazy" decoding="async">
+          <h3 class="sr-only">Urbótica</h3>
+          <span class="area-hover" aria-hidden="true">Consultar por WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></span>
+        </a>
       </div>
     </div>
   </section>
@@ -349,7 +341,7 @@
 </a>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js?v=20260727213222"></script>
+<script src="script.js?v=20260727213544"></script>
 <script src="/demo/track.js" defer></script>
 </body>
 </html>
