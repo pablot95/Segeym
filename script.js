@@ -52,7 +52,10 @@
     const closeBtn = document.getElementById('navClose');
     if (toggle && nav) {
       let bd = document.querySelector('.nav-backdrop');
-      if (!bd) { bd = document.createElement('div'); bd.className = 'nav-backdrop'; document.body.appendChild(bd); }
+      if (!bd) {
+        bd = document.createElement('div'); bd.className = 'nav-backdrop';
+        (document.querySelector('.site-header') || document.body).appendChild(bd);
+      }
       const close = () => {
         nav.classList.remove('open'); bd.classList.remove('open'); nav.setAttribute('inert', '');
         toggle.setAttribute('aria-expanded', 'false'); document.body.classList.remove('no-scroll');
