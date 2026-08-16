@@ -395,6 +395,23 @@ ul{list-style:none}
 .pat-shots figure:hover img{transform:scale(1.05)}
 .pat-shots figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .95rem .85rem;background:linear-gradient(transparent,rgba(6,16,28,.92));color:#fff;font-weight:700;font-size:.9rem}
 
-@media(max-width:1024px){.pat-grid{grid-template-columns:1fr}}
+.libros{position:relative;overflow:hidden;background:linear-gradient(180deg,#f6fafe,#fff 62%);border-top:1px solid var(--color-line)}
+.libros::before{content:"";position:absolute;inset:0;background:radial-gradient(72% 58% at 50% 106%,rgba(22,104,227,.13),transparent 70%);pointer-events:none}
+.libros>.container{position:relative;z-index:1}
+.libros-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.libro-card{display:flex;align-items:center;gap:1.4rem;background:#fff;border:1px solid var(--color-line);border-radius:var(--radius);padding:1.5rem;transition:transform .3s var(--ease-out),box-shadow .3s,border-color .3s}
+.libro-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+.libro-tapa{position:relative;flex-shrink:0;display:flex;align-items:flex-end;justify-content:center;height:236px}
+.libro-tapa img{height:100%;width:auto;max-width:none;object-fit:contain;filter:drop-shadow(0 18px 26px rgba(14,33,54,.34));transition:transform .45s var(--ease-out)}
+.libro-card:hover .libro-tapa img{transform:translateY(-9px) rotate(-1.6deg)}
+.libro-info{min-width:0}
+.libro-tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--color-primary);margin-bottom:.5rem}
+.libro-info h3{font-size:1.18rem;line-height:1.2;margin-bottom:.3rem}
+.libro-sub{font-weight:700;color:var(--color-ink);font-size:.92rem;margin-bottom:.5rem}
+.libro-info>p:last-of-type{font-size:.9rem;color:var(--color-text-muted);margin-bottom:1.1rem}
+.libro-info .btn{padding:.75rem 1.25rem;font-size:.9rem}
+
+@media(max-width:1024px){.pat-grid{grid-template-columns:1fr}.libros-grid{grid-template-columns:1fr;max-width:620px;margin-inline:auto}}
+@media(max-width:520px){.libro-card{flex-direction:column;align-items:stretch;text-align:center}.libro-tapa{height:250px;margin-bottom:1.4rem}.libro-info .btn{width:100%}}
 @media(max-width:560px){.pat-shots{grid-template-columns:1fr}.pat-shots figure{max-height:none}}
 @media (prefers-reduced-motion:reduce){.pat-viz .pat-flow{animation:none!important}}

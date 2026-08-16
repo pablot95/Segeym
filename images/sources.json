@@ -11,7 +11,9 @@
     "bonus1-instalacioncamarawifi.jpeg",
     "bonus2-instaladordecarradurasinteligenteseinalambricas.jpeg",
     "video.mp4",
-    "video-poster.jpg (frame extraido del video del cliente)"
+    "video-poster.jpg (frame extraido del video del cliente)",
+    "libro-domotica.webp (tapa recortada de la captura de Amazon que mando el cliente)",
+    "libro-juventud-multiplicadora.webp (tapa recortada de la captura de Amazon que mando el cliente)"
   ],
   "stock": [
     {
@@ -39,5 +41,6 @@
       "usage": "ensayo de puesta a tierra: medicion con puntas de prueba en el lugar"
     }
   ],
-  "pendiente": "No existe foto de telurimetro real en Pexels/Unsplash. El grafico del ensayo es SVG propio. Si el cliente manda una foto de su telurimetro, reemplaza a las 2 de stock de esta seccion."
+  "pendiente": "No existe foto de telurimetro real en Pexels/Unsplash. El grafico del ensayo es SVG propio. Si el cliente manda una foto de su telurimetro, reemplaza a las 2 de stock de esta seccion.",
+  "pendiente_libros": "Las 2 tapas salieron de capturas de pantalla de WhatsApp (~270px de ancho, reescaladas x3 y con el fondo blanco recortado). Si el cliente manda los JPG originales que subio a KDP, reemplazarlas."
 }
