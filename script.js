@@ -40,6 +40,28 @@
     }
   }
 
+  function initGroundTest() {
+    const viz = document.querySelector('.pat-viz');
+    if (!viz) return;
+    const read = viz.querySelector('.pat-read');
+    const target = parseFloat(viz.dataset.ohm) || 3.8;
+    const paint = (v) => { if (read) read.textContent = v.toFixed(1).replace('.', ','); };
+    const run = () => {
+      viz.classList.add('drawn');
+      if (reduce || !read) { paint(target); return; }
+      const start = performance.now(), delay = 700, dur = 1500;
+      const step = (now) => {
+        const t = Math.min(1, Math.max(0, (now - start - delay) / dur));
+        paint(target * (1 - Math.pow(1 - t, 3)));
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    if (reduce || !('IntersectionObserver' in window)) { run(); return; }
+    const io = new IntersectionObserver((ents) => ents.forEach((en) => { if (en.isIntersecting) { run(); io.disconnect(); } }), { threshold: 0.3 });
+    io.observe(viz);
+  }
+
   function initWspFloat() {
     const btn = document.getElementById('wsp-float');
     if (!btn) return;
@@ -120,6 +142,6 @@
     setTimeout(() => map.invalidateSize(), 200);
   }
 
-  function boot() { initReveals(); initWspFloat(); initNav(); initForm(); initMap(); }
+  function boot() { initReveals(); initGroundTest(); initWspFloat(); initNav(); initForm(); initMap(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();

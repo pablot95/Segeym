@@ -25,6 +25,19 @@
       "source": "Pexels",
       "sourceUrl": "https://www.pexels.com/photo/28950842/",
       "usage": "galeria: detalle de tablero"
+    },
+    {
+      "archivo": "medicion-instrumental-certificado-1600x1200.webp",
+      "source": "Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/35138694/",
+      "usage": "ensayo de puesta a tierra: medicion con instrumental sobre tablero"
+    },
+    {
+      "archivo": "medicion-en-obra-1600x1200.webp",
+      "source": "Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/33531832/",
+      "usage": "ensayo de puesta a tierra: medicion con puntas de prueba en el lugar"
     }
-  ]
+  ],
+  "pendiente": "No existe foto de telurimetro real en Pexels/Unsplash. El grafico del ensayo es SVG propio. Si el cliente manda una foto de su telurimetro, reemplaza a las 2 de stock de esta seccion."
 }

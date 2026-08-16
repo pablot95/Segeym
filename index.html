@@ -35,8 +35,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="styles.css?v=20260728001008">
-<noscript><style>[data-animate],[data-animate-stagger]>*{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="stylesheet" href="styles.css?v=20260816143000">
+<noscript><style>[data-animate],[data-animate-stagger]>*,.pat-inst,.pat-stake,.pat-dim,.pat-flow-wrap{opacity:1!important;transform:none!important}.pat-wire{stroke-dashoffset:0!important}</style></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -108,6 +108,7 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalaciones eléctricas" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tableros y protecciones eléctricas" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puesta a tierra y mediciones" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ensayo de puesta a tierra" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Iluminación y mantenimiento eléctrico" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguridad electrónica" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Domótica, inmótica y automatización" } }
@@ -124,6 +125,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sí. Desde el cableado y las bocas hasta el tablero, las protecciones y la puesta a tierra. También normalizamos instalaciones viejas que quedaron cortas para el consumo actual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el ensayo de puesta a tierra y cuándo hay que hacerlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una prueba obligatoria que comprueba que el sistema de puesta a tierra funciona correctamente y protege a las personas y a la instalación. Se hace al terminar una instalación, ante una habilitación y de forma periódica como control. Lo realiza un profesional idóneo con telurímetro e instrumental certificado."
           }
         },
         {
@@ -265,7 +274,7 @@
           <span class="serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v9M12 11 7 20M12 11l5 9M4 11h16"/></svg></span>
           <h3>Puesta a tierra y mediciones</h3>
           <p>Colocación de jabalina, medición de resistencia y corrección de fallas. La diferencia entre una instalación segura y una que asusta.</p>
-          <span class="tag">Seguridad eléctrica</span>
+          <a class="tag tag-link" href="#puestaatierra">Ver el ensayo de puesta a tierra<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
         </article>
         <article class="serv-card">
           <span class="serv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21h6M12 3a6 6 0 0 1 3 11 3 3 0 0 0-1 2H10a3 3 0 0 0-1-2 6 6 0 0 1 3-11z"/></svg></span>
@@ -285,6 +294,107 @@
           <p>Cámaras, control de accesos y alarmas conectadas a la misma instalación, con energía respaldada para que no se caigan.</p>
           <span class="tag">Cámaras · Accesos</span>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pat" id="puestaatierra">
+    <div class="container pat-grid">
+      <div class="pat-copy">
+        <span class="eyebrow" data-animate style="opacity:0;transform:translateY(26px)">Además</span>
+        <h2 data-animate style="opacity:0;transform:translateY(26px);transition-delay:.08s">Ensayo de puesta a tierra.</h2>
+        <p class="pat-lead" data-animate style="opacity:0;transform:translateY(26px);transition-delay:.14s">Es una prueba obligatoria: comprueba que el sistema de puesta a tierra funciona correctamente y protege a las personas y a la instalación. Va anexada al trabajo que hagamos o la contratás por separado.</p>
+        <div class="pat-list">
+          <div class="pat-item" data-animate style="opacity:0;transform:translateY(26px);transition-delay:.2s">
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <div><h4>Profesional idóneo</h4><p>Lo hace quien está formado para eso y sabe leer lo que marca el instrumento.</p></div>
+          </div>
+          <div class="pat-item" data-animate style="opacity:0;transform:translateY(26px);transition-delay:.26s">
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.6 18a9 9 0 1 1 16.8 0"/><path d="m12 18 4-6.5"/><circle cx="12" cy="18" r="1.6"/></svg></span>
+            <div><h4>Instrumental certificado</h4><p>Medimos con telurímetro y todo el instrumental certificado, no con un tester común.</p></div>
+          </div>
+          <div class="pat-item" data-animate style="opacity:0;transform:translateY(26px);transition-delay:.32s">
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M8 2.5v4M16 2.5v4M3 10h18M12 13.5v3l2 1.4"/></svg></span>
+            <div><h4>Cuándo se hace</h4><p>Al terminar una instalación, ante una habilitación y de forma periódica como control.</p></div>
+          </div>
+        </div>
+        <div class="pat-cta" data-animate style="opacity:0;transform:translateY(26px);transition-delay:.38s">
+          <a class="btn btn-wa" href="https://wa.me/5492994155073?text=Hola%20Segeym%20World%2C%20quiero%20un%20ensayo%20de%20puesta%20a%20tierra" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.003 0h-.006C7.166 0 0 7.168 0 16c0 3.504 1.129 6.752 3.047 9.392L1.05 31.35l6.156-1.968A15.9 15.9 0 0 0 16.003 32C24.834 32 32 24.83 32 16S24.834 0 16.003 0zm9.318 22.594c-.387 1.09-1.92 1.996-3.144 2.26-.837.178-1.93.32-5.61-1.204-4.706-1.95-7.737-6.73-7.973-7.04-.226-.31-1.902-2.533-1.902-4.832 0-2.299 1.168-3.428 1.638-3.898.387-.387.998-.563 1.585-.563.19 0 .36.01.514.017.47.02.706.048 1.016.79.387.93 1.328 3.23 1.44 3.463.114.234.228.55.07.86-.148.32-.278.46-.512.73-.234.27-.456.478-.69.767-.214.253-.456.524-.184.994.272.46 1.21 1.996 2.6 3.234 1.794 1.598 3.276 2.093 3.79 2.307.383.16.84.122 1.12-.184.356-.386.796-1.028 1.244-1.66.318-.452.72-.508 1.14-.352.428.148 2.72 1.282 3.19 1.516.47.234.782.348.896.542.114.196.114 1.122-.273 2.212z"/></svg> Pedir el ensayo por WhatsApp</a>
+        </div>
+      </div>
+      <figure class="pat-viz" data-ohm="3.8" data-animate style="opacity:0;transform:translateY(26px);transition-delay:.12s">
+        <svg class="pat-svg" viewBox="0 0 620 400" role="img" aria-label="Esquema del ensayo: el telurímetro conectado a la jabalina de la instalación y a dos picas auxiliares clavadas en el terreno">
+          <defs>
+            <linearGradient id="patSoil" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#12304a"/>
+              <stop offset="1" stop-color="#091626"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="226" width="620" height="174" fill="url(#patSoil)"/>
+          <path d="M0 226h620" stroke="#8fc0ff" stroke-opacity=".5" stroke-width="2"/>
+          <g class="pat-grit" fill="#8fc0ff" fill-opacity=".14">
+            <circle cx="46" cy="262" r="2.4"/><circle cx="96" cy="310" r="1.8"/><circle cx="212" cy="278" r="2.1"/><circle cx="268" cy="348" r="1.7"/><circle cx="404" cy="266" r="2.3"/><circle cx="468" cy="332" r="1.9"/><circle cx="588" cy="356" r="2.2"/><circle cx="330" cy="300" r="1.6"/>
+          </g>
+          <g class="pat-flow-wrap">
+            <path class="pat-flow" d="M152 330C244 388 468 384 556 296" fill="none" stroke="#8fc0ff" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="5 9"/>
+            <path class="pat-flow" d="M152 314C248 362 456 358 556 282" fill="none" stroke="#8fc0ff" stroke-opacity=".32" stroke-width="1.6" stroke-dasharray="5 9"/>
+          </g>
+          <g class="pat-dim">
+            <path d="M152 250h200M152 244v12M352 244v12" stroke="#7f9dc0" stroke-opacity=".6" stroke-width="1.4" fill="none"/>
+            <text x="252" y="243" text-anchor="middle">62 %</text>
+            <path d="M152 278h404M556 272v12" stroke="#7f9dc0" stroke-opacity=".6" stroke-width="1.4" fill="none"/>
+            <text x="354" y="271" text-anchor="middle">100 %</text>
+          </g>
+          <g class="pat-stake pat-stake-a">
+            <path d="M152 220v112" stroke="#e7f0fd" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M152 332v14" stroke="#e7f0fd" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <text x="152" y="372" text-anchor="middle">Jabalina</text>
+          </g>
+          <g class="pat-stake pat-stake-b">
+            <path d="M352 220v66" stroke="#8fc0ff" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <text x="352" y="308" text-anchor="middle">Pica de tensión</text>
+          </g>
+          <g class="pat-stake pat-stake-c">
+            <path d="M556 220v78" stroke="#8fc0ff" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <text x="556" y="320" text-anchor="middle">Pica de corriente</text>
+          </g>
+          <g class="pat-wires" fill="none" stroke-linecap="round">
+            <path class="pat-wire pat-wire-e" pathLength="1" d="M74 194c0 16 26 26 78 28" stroke="#e7f0fd" stroke-width="2.6"/>
+            <path class="pat-wire pat-wire-p" pathLength="1" d="M124 194c34 44 132 52 228 28" stroke="#8fc0ff" stroke-width="2.6"/>
+            <path class="pat-wire pat-wire-c" pathLength="1" d="M174 194c72 76 306 78 382 30" stroke="#8fc0ff" stroke-width="2.6"/>
+          </g>
+          <g class="pat-inst">
+            <rect x="34" y="26" width="180" height="168" rx="20" fill="#0f2742" stroke="#8fc0ff" stroke-opacity=".3" stroke-width="1.4"/>
+            <text class="pat-inst-label" x="56" y="50">TELURÍMETRO</text>
+            <rect x="56" y="60" width="136" height="56" rx="9" fill="#081726" stroke="#8fc0ff" stroke-opacity=".22" stroke-width="1.2"/>
+            <text class="pat-read" x="160" y="99" text-anchor="end">0,0</text>
+            <text class="pat-unit" x="178" y="99" text-anchor="end">Ω</text>
+            <circle cx="80" cy="146" r="17" fill="none" stroke="#8fc0ff" stroke-opacity=".45" stroke-width="2"/>
+            <path d="M80 146v-11" stroke="#8fc0ff" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M116 138h64M116 148h44M116 158h54" stroke="#8fc0ff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round"/>
+            <g class="pat-terms">
+              <circle cx="74" cy="194" r="6" fill="#0f2742" stroke="#e7f0fd" stroke-width="2"/>
+              <circle cx="124" cy="194" r="6" fill="#0f2742" stroke="#8fc0ff" stroke-width="2"/>
+              <circle cx="174" cy="194" r="6" fill="#0f2742" stroke="#8fc0ff" stroke-width="2"/>
+              <text x="74" y="216" text-anchor="middle">E</text>
+              <text x="124" y="216" text-anchor="middle">P</text>
+              <text x="174" y="216" text-anchor="middle">C</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption>Método de caída de potencial: el telurímetro inyecta corriente por la pica lejana y mide la tensión en la intermedia. De ahí sale la resistencia de la puesta a tierra.</figcaption>
+      </figure>
+    </div>
+    <div class="container">
+      <div class="pat-shots" data-animate-stagger>
+        <figure>
+          <img src="images/medicion-instrumental-certificado-1600x1200.webp" width="1600" height="1200" alt="Medición con pinza amperométrica sobre un tablero de potencia, con guante de seguridad" loading="lazy" decoding="async">
+          <figcaption>Instrumental certificado</figcaption>
+        </figure>
+        <figure>
+          <img src="images/medicion-en-obra-1600x1200.webp" width="1600" height="1200" alt="Técnico midiendo con puntas de prueba sobre la bornera de un equipo eléctrico" loading="lazy" decoding="async">
+          <figcaption>La medición, en el lugar</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -423,6 +533,7 @@
       </div>
       <div class="faq-wrap">
         <details class="acc-item"><summary><span>¿Hacen la instalación eléctrica completa de una casa u obra?</span><span class="acc-plus"></span></summary><div class="acc-body">Sí. Desde el cableado y las bocas hasta el tablero, las protecciones y la puesta a tierra. También normalizamos instalaciones viejas que quedaron cortas para el consumo actual.</div></details>
+        <details class="acc-item"><summary><span>¿Qué es el ensayo de puesta a tierra y cuándo hay que hacerlo?</span><span class="acc-plus"></span></summary><div class="acc-body">Es una prueba obligatoria que comprueba que el sistema de puesta a tierra funciona correctamente y protege a las personas y a la instalación. Se hace al terminar una instalación, ante una habilitación y de forma periódica como control. Lo realiza un profesional idóneo con telurímetro e instrumental certificado.</div></details>
         <details class="acc-item"><summary><span>¿Atienden urgencias eléctricas?</span><span class="acc-plus"></span></summary><div class="acc-body">Sí. Cortes, llaves que saltan, recalentamientos y fallas intermitentes. Escribinos por WhatsApp contándonos qué pasa y coordinamos la visita lo antes posible.</div></details>
         <details class="acc-item"><summary><span>¿Trabajan con empresas y hoteles?</span><span class="acc-plus"></span></summary><div class="acc-body">Sí. Hacemos proyectos a medida y planes de mantenimiento preventivo para hoteles, comercios e industrias, con foco en seguridad y consumo.</div></details>
         <details class="acc-item"><summary><span>¿Dan garantía?</span><span class="acc-plus"></span></summary><div class="acc-body">Sí. Todo trabajo incluye garantía y seguimos disponibles después de la entrega para cualquier ajuste o consulta.</div></details>
@@ -449,7 +560,7 @@
         <h3>Escribinos</h3>
         <div class="field"><label for="cf-nombre">Nombre</label><input id="cf-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required></div>
         <div class="field"><label for="cf-tel">Teléfono / WhatsApp</label><input id="cf-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="299 555-5555" required></div>
-        <div class="field"><label for="cf-serv">¿Qué necesitás?</label><select id="cf-serv" name="servicio"><option value="">Elegí un servicio…</option><option>Instalación eléctrica</option><option>Tablero y protecciones</option><option>Puesta a tierra / medición</option><option>Iluminación</option><option>Mantenimiento o urgencia</option><option>Seguridad electrónica (cámaras)</option><option>Domótica / Smart Home</option><option>Inmótica (hotel / edificio)</option><option>Urbótica (complejo / urbano)</option><option>Otro</option></select></div>
+        <div class="field"><label for="cf-serv">¿Qué necesitás?</label><select id="cf-serv" name="servicio"><option value="">Elegí un servicio…</option><option>Instalación eléctrica</option><option>Tablero y protecciones</option><option>Puesta a tierra / ensayo y medición</option><option>Iluminación</option><option>Mantenimiento o urgencia</option><option>Seguridad electrónica (cámaras)</option><option>Domótica / Smart Home</option><option>Inmótica (hotel / edificio)</option><option>Urbótica (complejo / urbano)</option><option>Otro</option></select></div>
         <div class="field"><label for="cf-msg">Mensaje</label><textarea id="cf-msg" name="mensaje" placeholder="Contanos qué necesitás, la localidad y el tipo de espacio."></textarea></div>
         <button class="btn btn-primary" type="submit">Enviar consulta por WhatsApp</button>
         <p class="form-note">Al enviar se abre WhatsApp con tu consulta ya armada.</p>
@@ -469,7 +580,7 @@
         <h4>Servicios eléctricos</h4>
         <a href="#electricidad">Instalaciones</a>
         <a href="#electricidad">Tableros y protecciones</a>
-        <a href="#electricidad">Puesta a tierra</a>
+        <a href="#puestaatierra">Ensayo de puesta a tierra</a>
         <a href="#electricidad">Iluminación</a>
         <a href="#electricidad">Mantenimiento y urgencias</a>
       </div>
@@ -500,7 +611,7 @@
 </a>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js?v=20260728001008"></script>
+<script src="script.js?v=20260816143000"></script>
 <script src="/demo/track.js" defer></script>
 </body>
 </html>
