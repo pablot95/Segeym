@@ -1,0 +1,19 @@
+{
+  "name": "Segeym World Argentina",
+  "short_name": "Segeym",
+  "description": "Servicios eléctricos, seguridad electrónica, domótica y automatización en Neuquén y Vaca Muerta.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1668e3",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "/images/logo-redondo.png",
+      "sizes": "720x720",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

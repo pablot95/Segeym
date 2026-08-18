@@ -306,6 +306,7 @@ ul{list-style:none}
   .areas-grid{grid-template-columns:1fr;max-width:440px;margin-inline:auto}
   .bonus-grid{grid-template-columns:1fr}
   .bonus-card>img{aspect-ratio:3/4;max-height:56svh}
+  .hero-visual{order:initial}
   .hero-brand-card{min-height:auto;padding:1.4rem 1rem;border-radius:26px}
   .hero-logo-wrap{width:min(74vw,300px)}
   .hero-area-list{grid-template-columns:1fr}
